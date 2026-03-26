@@ -44,10 +44,10 @@ const handleAlertInputChange = (e) => {
     alertInputVal = parseInt(e.target.value) || 0;
 };
 
-// Use alertInputVal for the alert trigger
+
 const alertCounter = () => {
     targetAlert = alertInputVal;
-    alertInputVal = 0; // Clear alert input after setting
+    alertInputVal = 0; 
 };
 
 setInterval(() => {
@@ -59,26 +59,25 @@ setInterval(() => {
   let Five = Math.floor((counter/10000)%10)
   let Six = Math.floor((counter/100000)%10)
 
+  if (counter === targetAlert) {
+      alert("Counter has reached "+targetAlert);       
+  }
 
-if (counter === targetAlert) {
-    alert("Counter has reached "+targetAlert);       
-}
-
-if (mode === 'start') {
-    counter++;
-}
-else if (mode === 'stop') {
-    counter = counter;    
-}
-else if (mode === 'reset') {
-    counter = 0;
-    mode = 'start';
-}
-else if (mode === 'countDown') {
-    if (counter > 0) {        
-        counter--;
-    }
-}
+  if (mode === 'start') {
+      counter++;
+  }
+  else if (mode === 'stop') {
+      counter = counter;    
+  }
+  else if (mode === 'reset') {
+      counter = 0;
+      mode = 'start';
+  }
+  else if (mode === 'countDown') {
+      if (counter > 0) {        
+          counter--;
+      }
+  }
 
   ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -90,8 +89,8 @@ else if (mode === 'countDown') {
           onAlert={alertCounter}
           onInputChange={handleInputChange} 
           inputValue={inputVal}
-      onAlertInputChange={handleAlertInputChange} // New prop
-      alertInputValue={alertInputVal} 
+          onAlertInputChange={handleAlertInputChange}
+          alertInputValue={alertInputVal} 
     />
   </React.StrictMode>,
 )
