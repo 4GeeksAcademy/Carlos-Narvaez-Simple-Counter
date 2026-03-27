@@ -18,7 +18,7 @@ let alertInputVal  = 0;
 let targetAlert = null; 
 
 const startCounter = () => {
-  mode = 'start';
+    mode = 'start';
 };
 
 const stopCounter = () => {
@@ -34,16 +34,13 @@ const countDownCounter = () => {
     mode = 'countDown';
 };
 
-const handleInputChange = (e) => {    
-    inputVal = parseInt(e.target.value);
+const handleInputChange = (event) => {    
+    inputVal = parseInt(event.target.value);
 };
 
-
-
-const handleAlertInputChange = (e) => {    
-    alertInputVal = parseInt(e.target.value) || 0;
+const handleAlertInputChange = (event) => {    
+    alertInputVal = parseInt(event.target.value) || 0;
 };
-
 
 const alertCounter = () => {
     targetAlert = alertInputVal;
@@ -86,6 +83,7 @@ setInterval(() => {
           onStop={stopCounter}
           onReset={resetCounter} 
           onCountDown={countDownCounter}
+
           onAlert={alertCounter}
           onInputChange={handleInputChange} 
           inputValue={inputVal}

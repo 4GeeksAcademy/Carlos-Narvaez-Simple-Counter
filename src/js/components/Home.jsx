@@ -5,25 +5,25 @@ const Home = (props) => {
 		<div className="container-fluid">
 			<div className="row bg-black m-1 py-3">
 				<div className="col-2"></div>
-				<div className="col-2 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-2 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					<i className="fa-regular fa-clock"></i>
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digSix}
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digFive}
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digFour}
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digThree}	
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digTwo}			
 				</div>
-				<div className="col-1 btn btn-dark border-secondary fw-bold" style={{ fontSize: "100px"}}>
+				<div className="col-1 btn btn-dark border-dark fw-bold me-3" style={{ fontSize: "100px"}}>
 					{props.digOne}
 				</div>
 				<div className="col-2"></div>
